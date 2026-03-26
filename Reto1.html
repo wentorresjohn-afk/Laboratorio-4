@@ -1,11 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Saludo con botón</title>
+  <style>
+   */
+    body {
+      display: flex;
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center;     
+      height: 100vh;          
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    h2 {
+      margin-bottom: 30px; 
+    }
+
+    button {
+      font-size: 20px;       
+      padding: 15px 30px;   
+      cursor: pointer;       
+      border-radius: 8px;    
+      border: none;
+      background-color: darkblue;
+      color: white;
+    }
+
+    button:hover {
+      background-color: navy; 
+    }
+  </style>
 </head>
 <body>
-    
+  <h2>Programa de saludo</h2>
+  <button onclick="pedirNombre()">Haz clic aquí</button>
+
+  <script>
+    function pedirNombre() {
+      let nombre = prompt("Por favor, ingresa tu nombre:");
+      if (nombre && nombre.trim() !== "") {
+        alert("¡Hola, " + nombre + "!");
+      } else {
+        alert("No ingresaste ningún nombre.");
+      }
+    }
+  </script>
 </body>
 </html>
